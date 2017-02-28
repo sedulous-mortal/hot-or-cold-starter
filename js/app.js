@@ -22,6 +22,7 @@ $(document).ready(function () {
         $('#feedback').text("Make your Guess!");
         $('#guessList').empty();
         $('#count').text("0");
+        console.log(secret_num);
     }
 
     function newSecret() {
@@ -65,9 +66,9 @@ $(document).ready(function () {
             $('#feedback').text("Ice Cold");
         } else if (Math.abs(secret_num - userGuess) > 20) {
             $('#feedback').text("Cold");
-        } else if (Math.abs(secret_num - userGuess) > 15) {
+        } else if (Math.abs(secret_num - userGuess) > 10) {
             $('#feedback').text("Hot");
-        } else if (Math.abs(secret_num - userGuess) < 10) {
+        } else if (Math.abs(secret_num - userGuess) < 5) {
             $('#feedback').text("Super Hot");
         }
     }
